@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julio Anizio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  padding: 25px;
+  text-align: center;
+}
+
+/* LOGO */
+.logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(168,85,247,0.5);
+}
+
+/* FOTO */
+.photo {
+  width: 100%;
+  height: 260px;
+  border-radius: 20px;
+  background: url('fotoJulio.png') center/cover;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* TEXTO */
+h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.subtitle {
+  color: #a5b4fc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin-bottom: 20px;
+}
+
+/* BOTÕES */
+.btn {
+  display: block;
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.portfolio {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.maps {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* SERVIÇOS */
+.services {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.services h3 {
+  margin-bottom: 10px;
+}
+
+.service-item {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="logoJulio.png" class="logo">
+
+  <!-- FOTO -->
+  <div class="photo"></div>
+
+  <h1>Julio Anizio </h1>
+  <div class="subtitle">Desenvolvedor Full Stack</div>
+
+  <div class="highlight">
+    Crio páginas modernas que ajudam negócios a conseguir mais clientes 🚀
+  </div>
+
+  <a class="btn whatsapp" href="https://wa.me/5547999500750?text=Oi,%20vim%20pelo%20seu%20site">
+    📲 Falar no WhatsApp
+  </a>
+
+  <a class="btn portfolio" href="#">
+    💼 Ver portfólio
+  </a>
+
+  <a class="btn maps" href="https://www.google.com/maps/search/?api=1&query=Avenida+Nilo+Simas,+162,+Itajai+SC">
+    📍 Ver localização
+  </a>
+
+  <div class="services">
+    <h3>🛠️ Serviços</h3>
+    <div class="service-item">Landing pages modernas</div>
+    <div class="service-item">Cartão digital profissional</div>
+    <div class="service-item">Ajustes em sites</div>
+  </div>
+
+  <div class="footer">
+    📍 Itajaí - SC
+  </div>
+
+</div>
+
+</body>
+</html>
