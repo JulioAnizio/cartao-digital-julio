@@ -4,92 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Julio Anizio | Desenvolvedor Full Stack</title>
+<title>Julio Anizio | Desenvolvedor</title>
 
 <style>
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* VARIÁVEIS */
+:root {
+  --bg: #020617;
+  --card: rgba(255,255,255,0.05);
+  --text: #fff;
+  --accent: #22c55e;
+  --secondary: #38bdf8;
+}
+
+.light {
+  --bg: #f1f5f9;
+  --card: rgba(0,0,0,0.05);
+  --text: #000;
+}
+
+/* BODY */
 body {
-  background: linear-gradient(180deg, #0f172a, #020617);
-  color: #fff;
+  background: radial-gradient(circle at top, var(--bg), #000);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 25px;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease;
 }
 
 .logo {
-  width: 90px;
-  margin-bottom: 15px;
+  width: 80px;
 }
 
 .foto {
   width: 110px;
   height: 110px;
   border-radius: 50%;
+  border: 3px solid var(--accent);
   margin: 10px auto;
   display: block;
-  border: 3px solid #22c55e;
+  box-shadow: 0 0 25px rgba(34,197,94,0.5);
 }
 
-.hero h1 {
+/* TITULOS */
+h1 {
   font-size: 26px;
 }
 
-.hero p {
-  margin: 10px 0;
-  color: #cbd5f5;
+.subtitle {
+  color: var(--secondary);
 }
 
+.desc {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* BOTÃO */
 .cta {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px 20px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  border-radius: 12px;
+  display: block;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 14px;
   text-decoration: none;
-  color: white;
   font-weight: bold;
+  background: linear-gradient(135deg, var(--accent), #16a34a);
+  color: white;
+  transition: 0.3s;
 }
 
-/* SECTION */
-.section {
-  padding: 20px;
-}
-
-.title {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #38bdf8;
+.cta:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px var(--accent);
 }
 
 /* CARD */
 .card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
+  background: var(--card);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeUp 1s ease;
 }
 
-.item {
-  background: #020617;
-  padding: 10px;
-  border-radius: 10px;
+/* TITULOS SEÇÃO */
+.title {
+  color: #facc15;
   margin-bottom: 10px;
 }
 
-/* BOTÃO FIXO */
-.whatsapp-float {
+/* LISTA */
+.item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* PORTFOLIO */
+.portfolio {
+  border-left: 4px solid var(--accent);
+}
+
+/* BOTÃO FLUTUANTE */
+.whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #22c55e;
+  background: var(--accent);
   padding: 14px;
   border-radius: 50px;
   text-decoration: none;
@@ -97,29 +140,102 @@ body {
   font-weight: bold;
 }
 
-/* FOOTER */
+/* TOGGLE */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--card);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .footer {
   text-align: center;
-  padding: 20px;
   font-size: 12px;
-  color: #aaa;
+  opacity: 0.6;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<div class="hero">
+<div class="toggle" onclick="toggleTheme()">🌗</div>
 
-  <img src="logojulio.png" class="logo">
+<div class="container">
 
-  <img src="fotoJulio.png" class="foto">
+  <div class="hero">
+    <img src="logoJulio.png" class="logo">
+    <img src="fotoJulio.png" class="foto">
 
-  <h1>Julio Anizio</h1>
+    <h1>Julio Anizio</h1>
+    <div class="subtitle">Desenvolvedor Full Stack</div>
 
-  <p>Desenvolvedor Full Stack</p>
+    <div class="desc">
+      Crio páginas modernas que convertem visitantes em clientes 🚀
+    </div>
 
-  <p>Crio páginas que levam clientes direto pro seu WhatsApp 🚀</p>
+    <a class="cta" href="https://wa.me/5547999500750">
+      📲 Falar comigo
+    </a>
+  </div>
 
-  <a class="cta" href="https://wa.me/5
+  <div class="card portfolio">
+    <div class="title">💼 Projeto real</div>
+
+    <strong>Ovídio dos Santos</strong><br>
+    Transporte de animais<br><br>
+
+    <a class="cta" href="https://julioanizio.github.io/site_ovidio">
+      Ver site
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="title">⚙️ Como funciona</div>
+
+    <div class="item">1. Página personalizada</div>
+    <div class="item">2. Integração com WhatsApp</div>
+    <div class="item">3. Clientes entram em contato direto</div>
+  </div>
+
+  <div class="card">
+    <div class="title">🛠️ Serviços</div>
+
+    <div class="item">Landing pages</div>
+    <div class="item">Cartão digital</div>
+    <div class="item">Sites profissionais</div>
+  </div>
+
+  <div class="footer">
+    © Julio Anizio
+  </div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/5547999500750">
+💬
+</a>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
